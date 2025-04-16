@@ -25,7 +25,7 @@ const FoodEmojiBackground = () => {
         ? 50 + (initialProgress * 2 * 10)
         : 50 + ((1 - initialProgress) * 2 * 10);
       
-  return (
+      return (
         <div 
           key={`initial-${i}`}
           className="absolute text-4xl"
@@ -76,7 +76,7 @@ const FoodEmojiBackground = () => {
   return (
     <div className="fixed inset-0 overflow-hidden -z-10 select-none pointer-events-none">
       {emojiElements}
-        </div>
+    </div>
   );
 };
 
