@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef, useMemo } from "react";
+import { useEffect, useState, useRef, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -86,7 +86,8 @@ const FoodEmojiBackground = () => {
   );
 };
 
-export default function RecipeResult() {
+// Component to handle search params with Suspense
+function RecipeResultContent() {
   const searchParams = useSearchParams();
   const recipe = searchParams.get("recipe") || "";
   const ingredients = searchParams.get("ingredients") || "";
@@ -439,5 +440,14 @@ export default function RecipeResult() {
         />
       )}
     </main>
+  );
+}
+
+// Main component with Suspense boundary
+export default function RecipeResult() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><LoadingSpinner message="Loading recipe..." /></div>}>
+      <RecipeResultContent />
+    </Suspense>
   );
 } 
