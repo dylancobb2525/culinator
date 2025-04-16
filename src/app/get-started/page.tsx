@@ -257,7 +257,7 @@ export default function RecipeForm() {
                   id="additionalNotes"
                   value={additionalNotes}
                   onChange={(e) => setAdditionalNotes(e.target.value)}
-                  placeholder="E.g., 'I have a nut allergy', 'I prefer low-carb meals', 'I need high-protein options', 'I'm cooking for a family of 4', 'I want quick recipes under 30 minutes'..."
+                  placeholder="E.g., &apos;I have a nut allergy&apos;, &apos;I prefer low-carb meals&apos;, &apos;I need high-protein options&apos;, &apos;I&apos;m cooking for a family of 4&apos;, &apos;I want quick recipes under 30 minutes&apos;..."
                   className={`w-full p-3 border ${isAtLimit ? 'border-red-500' : isNearLimit ? 'border-yellow-500' : 'border-gray-300'} rounded-md h-36 focus:ring-2 ${isAtLimit ? 'focus:ring-red-500 focus:border-red-500' : 'focus:ring-blue-500 focus:border-blue-500'} outline-none`}
                   maxLength={MAX_NOTES_CHARS}
                 />

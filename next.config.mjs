@@ -24,13 +24,17 @@ const nextConfig = {
         protocol: "https",
         hostname: "oaidalleapiprodscus.blob.core.windows.net",
       },
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com", // Google user profile images
+      },
+      {
+        protocol: "https",
+        hostname: "www.googleapis.com",
+      },
     ],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: [
-      'lh3.googleusercontent.com', // Google user profile images
-      'www.googleapis.com',
-    ],
   },
   async rewrites() {
     return [

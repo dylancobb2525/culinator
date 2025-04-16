@@ -149,7 +149,7 @@ export default function ChefChat({ recipe, ingredients, additionalNotes, recipeC
             {/* Welcome message */}
             {isFirstOpen && messages.length === 0 && (
               <div className="bg-gray-100 rounded-lg p-3 text-gray-800">
-                <p className="text-sm font-medium mb-2">👋 Hello! I'm Chef Claude.</p>
+                <p className="text-sm font-medium mb-2">👋 Hello! I&apos;m Chef Claude.</p>
                 <p className="text-sm mb-3">I can help answer questions about your recipe for {recipe}. What would you like to know?</p>
                 <div className="space-y-2">
                   {suggestedQuestions.map((question, index) => (
